@@ -1,0 +1,13 @@
+[Security]
+PreSharedKey=5b45f64df56a1f29e75b93c093ba443604b3c86ecc8659147a788dc44b1ef205
+Passphrase=MySecretPassphrase
+
+[Settings]
+AutoConnect=true
+
+[IPv4]
+Address=192.168.7.177
+Gateway=192.168.7.1
+DNS=8.8.8.8
+Netmask=255.255.255.0
+DomainName=condarelli.it
