@@ -1,8 +1,8 @@
 import os
 import tempfile
 
-from _ell.lib import *
-from _ell import ffi
+from ._ell.lib import *
+from ._ell import ffi
 
 
 class EllSettings:

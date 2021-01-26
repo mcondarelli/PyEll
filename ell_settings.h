@@ -1,6 +1,12 @@
-typedef long int ptrdiff_t;
-typedef long unsigned int size_t;
+//#if __SIZEOF_POINTER__ > __SIZEOF_INT__  /* use this for 64_bit machines */
+//typedef long int ptrdiff_t;
+//typedef long unsigned int size_t;
+//#else                                    /* use this for 32_bit machines */
+typedef int ptrdiff_t;
+typedef unsigned int size_t;
+//#endif
 typedef int wchar_t;
+typedef ... va_list;
 
 
 
@@ -12,8 +18,8 @@ void l_free(void *ptr);
 void *l_realloc(void *mem, size_t size);
 char *l_strdup(const char *str);
 char *l_strndup(const char *str, size_t max);
-//char *l_strdup_printf(const char *format, ...);
-//char *l_strdup_vprintf(const char *format, va_list args);
+char *l_strdup_printf(const char *format, ...);
+char *l_strdup_vprintf(const char *format, va_list args);
 
 size_t l_strlcpy(char* dst, const char *src, size_t len);
 
