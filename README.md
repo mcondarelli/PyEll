@@ -1,5 +1,4 @@
 # Example Package
 
-This is a simple example package. You can use
-[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+This is a simple Python3 wrapper for (part of) the [ell](https://git.kernel.org/pub/scm/libs/ell) (Embedded Linux library).
+
