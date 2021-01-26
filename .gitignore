@@ -1,0 +1,7 @@
+venv
+.idea
+.tox
+*.o
+*.so
+build
+ell/_ell.c
