@@ -1,11 +1,3 @@
-//#if __SIZEOF_POINTER__ > __SIZEOF_INT__  /* use this for 64_bit machines */
-//typedef long int ptrdiff_t;
-//typedef long unsigned int size_t;
-//#else                                    /* use this for 32_bit machines */
-typedef int ptrdiff_t;
-typedef unsigned int size_t;
-//#endif
-typedef int wchar_t;
 typedef ... va_list;
 
 
