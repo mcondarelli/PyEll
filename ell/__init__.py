@@ -8,11 +8,14 @@ from ._ell import ffi
 class EllSettings:
     def __init__(self, filename=None):
         self.settings = l_settings_new()
-        self.filename = os.path.abspath(filename)
         if filename:
-            ok = l_settings_load_from_file(self.settings, filename.encode())
-            if not ok:
-                raise ValueError(f'l_settings_load_from_file({filename}): failed')
+            self.filename = os.path.abspath(filename)
+            if os.path.exists(self.filename):
+                ok = l_settings_load_from_file(self.settings, filename.encode())
+                if not ok:
+                    raise ValueError(f'l_settings_load_from_file({filename}): failed')
+        else:
+            self.filename = None
 
     def save(self, filename=None):
         fn = filename or self.filename
